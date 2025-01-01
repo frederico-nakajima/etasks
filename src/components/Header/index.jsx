@@ -1,14 +1,19 @@
-import { Plus } from "@phosphor-icons/react";
+import { Plus,List } from "@phosphor-icons/react";
 
 import { Button } from "../Button";
 
-import { Container } from "./styles";
+import { Container,Menu } from "./styles";
+import styled from "styled-components";
 
-export function Header() {
+export function Header({onOpenMenu}) {
   return (
     <Container>
+      <Menu onClick={onOpenMenu}>
+        <List/>
+      </Menu>
       <h1>Tarefas</h1>
       <Button icon={Plus} title="Nova tarefa" />
     </Container>
   );
 }
+

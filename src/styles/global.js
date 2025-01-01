@@ -6,6 +6,14 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+    :root{
+      font-size:16px;
+
+    @media(max-width:${DEVICE_BREAKPOINTS.MD}) {
+      font-size:12px;
+    
+    }
+    
 
   body {
     background-color: ${({ theme }) => theme.COLORS.GRAY_800};
@@ -34,7 +42,7 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 8px;
+    width: .5rem;
   }
   
   ::-webkit-scrollbar-track {
